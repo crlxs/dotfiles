@@ -1,0 +1,2 @@
+alias ls="ls --color=auto"
+alias config='/usr/bin/git --git-dir=$HOME/.dotfilestest/ --work-tree=$HOME'
