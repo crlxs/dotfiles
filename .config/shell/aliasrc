@@ -1,5 +1,8 @@
 alias ls="ls --color=auto"
+
+# Dotfiles management aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfilestest/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Use $XINITRC variable if file exists, so startx wont break.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
