@@ -1,4 +1,10 @@
 #!/bin/bash
 
+# Normal launch
+#compton -b &
+#exec dwm
+
+# With dbus
 compton -b &
-exec dwm
+dbus-update-activation-environment --all
+dbus-launch ssh-agent dwm
