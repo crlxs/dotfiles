@@ -1,4 +1,4 @@
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --group-directories-first"
 
 # Dotfiles management aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfilestest/ --work-tree=$HOME'
