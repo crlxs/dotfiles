@@ -39,3 +39,6 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# Remove annoying .sudo_as_admin_succesful file cluttering my home :)
+rm -f $HOME/.sudo_as_admin_succesful
