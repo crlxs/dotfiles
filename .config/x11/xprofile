@@ -4,6 +4,6 @@
 # startx/xinit also source this file.
 
 # xrandr --dpi 96 	# Set DPI?
-xset r rate 200 50 	# Set the keyboard repeat delay and rate
+xset r rate 150 75 	# Set the keyboard repeat delay and rate
 #fehwallpaper &		# set background here aswell?
 xwallpaper --zoom ~/.local/share/wallpaper &
