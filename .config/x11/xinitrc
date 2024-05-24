@@ -9,7 +9,7 @@ fi
 
 # Normal launch
 compton -b &
-fehwallpaper &
+#fehwallpaper &
 exec dwm
 
 # With dbus

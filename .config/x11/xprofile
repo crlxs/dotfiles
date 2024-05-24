@@ -5,4 +5,5 @@
 
 # xrandr --dpi 96 	# Set DPI?
 xset r rate 200 50 	# Set the keyboard repeat delay and rate
-			# set background here aswell?
+#fehwallpaper &		# set background here aswell?
+xwallpaper --zoom ~/.local/share/wallpaper &
