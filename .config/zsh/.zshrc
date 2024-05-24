@@ -1,8 +1,8 @@
 # Set up the prompt
 
-autoload -Uz promptinit
-promptinit
-prompt adam1
+# Load version control system
+autoload -Uz vcs_info
+precmd() { vcs_info }
 
 setopt histignorealldups sharehistory
 
@@ -39,3 +39,10 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# Prompt
+
+zstyle ':vcs_info:git:*' formats '%b '
+setopt PROMPT_SUBST
+#PROMPT='%F{green}%n@%%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%B%F{white}%n%F{red}@%F{white}%m:[%~%f] %F{green}${vcs_info_msg_0_}%f$ %b'
