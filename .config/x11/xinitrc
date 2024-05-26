@@ -8,11 +8,11 @@ else
 fi
 
 # Normal launch
-#compton -b &
+compton -b &
 #fehwallpaper & # This isnt done here anymore
-#exec dwm
+exec dwm
 
 # With dbus
-compton -b &
-dbus-update-activation-environment --all
-dbus-launch ssh-agent dwm
+#compton -b &
+#dbus-update-activation-environment --all
+#dbus-launch ssh-agent dwm
