@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# This script checks the hostname of the machine you are on, its main purpose is to launch different xrandr scripts depending
+# on the machine
+
+case $HOSTNAME in
+	(z10-d) echo "You are in z10-d!";;
+	(x1c-d) echo "You are in x1c-d!";;
+	(*) echo "Where the fuck are you?";;
+esac
