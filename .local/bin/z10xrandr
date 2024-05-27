@@ -4,9 +4,13 @@
 
 #xrandr --output DP-1 --primary --mode 1920x1080 -r 144 --output DP-2 --mode 1920x1080 -r 60 --output HDMI-1 --mode 1920x1080 -r 60 --right-of DP-2 --rotate right
 
-xrandr --output DP-1 --primary --mode 1920x1080 -r 144 \
-	--output DP-2 --mode 1920x1080 -r 60 --left-of DP-1 \
-	--output HDMI-1 --mode 1920x1080 -r 60 --right-of DP-1 --rotate right
+#xrandr --output DP-1 --primary --mode 1920x1080 -r 144 \
+#	--output DP-2 --mode 1920x1080 -r 60 --left-of DP-1 \
+#	--output HDMI-1 --mode 1920x1080 -r 60 --right-of DP-1 --rotate right
+
+xrandr --output DP1 --primary --mode 1920x1080 -r 60
+xrandr --output DP-2 --mode 1920x1080 -r 60 --left-of DP-1
+xrandr --output HDMI-1 --mode 1920x1080 -r 60 --right-of DP-1 --rotate right
 
 #						       +--------------+
 #						       |	      |
