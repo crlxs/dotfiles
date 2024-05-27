@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # This file runs when a DM logs you into a graphical session.
-# startx/xinit also source this file.
+# startx/xinit also sources this file.
 
 # xrandr --dpi 96 	# Set DPI?
 xset r rate 200 50 	# Set the keyboard repeat delay and rate
