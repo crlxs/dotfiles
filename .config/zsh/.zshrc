@@ -7,7 +7,7 @@ precmd() { vcs_info }
 setopt histignorealldups sharehistory
 
 # Shell integrations
-eval "$(fzf --zsh)" # fuzzy finding
+# eval "$(fzf --zsh)" # fuzzy finding, Ctrl R to open but its not working it doesnt like the --zsh flag when I source the file
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000000
