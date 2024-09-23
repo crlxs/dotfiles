@@ -8,9 +8,9 @@
 #	--output DP-2 --mode 1920x1080 -r 60 --left-of DP-1 \
 #	--output HDMI-1 --mode 1920x1080 -r 60 --right-of DP-1 --rotate right
 
-xrandr --output DP-3 --primary --mode 1920x1080 -r 144
-xrandr --output DP-2 --mode 1920x1080 -r 60 --left-of DP-3
-xrandr --output HDMI-1 --mode 1920x1080 -r 60 --right-of DP-3 --rotate right
+xrandr --output DP-0 --primary --mode 1920x1080 -r 144
+xrandr --output DP-3 --mode 1920x1080 -r 60 --left-of DP-0
+xrandr --output HDMI-0 --mode 1920x1080 -r 60 --right-of DP-0 --rotate right
 
 fehwallpaper
 
