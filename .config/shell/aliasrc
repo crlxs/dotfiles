@@ -10,3 +10,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # wget alias to get rid of ~/.wget-hsts
 alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
+
+# history command for zsh only lists first 16 lines by default, aliasing to "history 1" so it lists all
+
+alias history="history 1"
