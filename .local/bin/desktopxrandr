@@ -1,13 +1,5 @@
 #!/bin/bash
 
-#xrandr --output DP-2 --primary --mode 1920x1080 -r 144 --output DP-5 --mode 1920x1080 --left-of DP-2 --output HDMI-0 --mode 1920x1080 -r 60 --right-of DP-2 --rotate right
-
-#xrandr --output DP-1 --primary --mode 1920x1080 -r 144 --output DP-2 --mode 1920x1080 -r 60 --output HDMI-1 --mode 1920x1080 -r 60 --right-of DP-2 --rotate right
-
-#xrandr --output DP-1 --primary --mode 1920x1080 -r 144 \
-#	--output DP-2 --mode 1920x1080 -r 60 --left-of DP-1 \
-#	--output HDMI-1 --mode 1920x1080 -r 60 --right-of DP-1 --rotate right
-
 xrandr --output DP-0 --primary --mode 1920x1080 -r 144
 xrandr --output DP-3 --mode 1920x1080 -r 60 --left-of DP-0
 xrandr --output HDMI-0 --mode 1920x1080 -r 60 --right-of DP-0 --rotate right
@@ -23,7 +15,7 @@ fehwallpaper
 #	+--------------------+ +---------------------+ |    HDMI-1    |
 #	|                    | |		     | |              |
 #	|	  	     | |		     | |	      |
-#	|	  DP-2	     | |        DP-1 	     | |	      |
+#	|	  DP-3       | |        DP-0 	     | |	      |
 #	|		     | |		     | |	      |
 #	|		     | |		     | |	      |
 #	+--------------------+ +---------------------+ +--------------+
