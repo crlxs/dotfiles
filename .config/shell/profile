@@ -25,9 +25,12 @@ export XINITRC="$XDG_CONFIG_HOME"/x11/xinitrc
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 
 # ansible
-export ANSIBLE_HOME="$XDG_CONFIG_HOME/ansible"
-export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
-export ANSIBLE_GALAXY_CACHE_DIR="$XDG_CACHE_HOME/ansible/galaxy_cache"
+export ANSIBLE_HOME="$XDG_CONFIG_HOME"/ansible
+export ANSIBLE_CONFIG="$XDG_CONFIG_HOME"/ansible/ansible.cfg
+export ANSIBLE_GALAXY_CACHE_DIR="$XDG_CACHE_HOME"/ansible/galaxy_cache
+
+# docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 
 # Start graphical server on user's current tty if not already running. (startx automatically on login)
 #[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
