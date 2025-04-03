@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = "//"
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -33,8 +33,14 @@ require("lazy").setup({
   checker = { enabled = true},
 
   -- My configs
+  --
+  -- Tabs
   vim.cmd("set expandtab"),
   vim.cmd("set tabstop=2"),
   vim.cmd("set softtabstop=2"),
   vim.cmd("set shiftwidth=2")
 })
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = 'Telescope find files' })
