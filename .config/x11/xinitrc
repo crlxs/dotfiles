@@ -7,9 +7,14 @@ else
 	. "$HOME/.xprofile"
 fi
 
+# Statusbar loop
+while true; do
+  xsetroot -name " $(date +"%F %R") "
+  sleep 1m
+done &
+
 # Normal launch
 compton -b &
-#fehwallpaper & # This isnt done here anymore
 exec dwm
 
 # With dbus
