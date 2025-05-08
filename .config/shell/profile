@@ -2,6 +2,7 @@
 
 # Add all directories in `~/.local/bin` to $PATH
 export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
+export PATH=$PATH:/usr/local/go/bin
 
 # Default programs:
 export EDITOR="nvim"
