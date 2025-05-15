@@ -46,3 +46,6 @@ zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 #PROMPT='%F{green}%n@%%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 PROMPT='%B%F{white}%n%F{red}@%F{white}%m:[%F{blue}%~%f] %F{green}${vcs_info_msg_0_}%f$ %b'
+
+# Autocompletions
+plugins=(git kubectl Kube-ps1)
