@@ -1,6 +1,8 @@
 #!/bin/sh
 
 alias ls="ls --color=auto --group-directories-first"
+alias n="nvim"
+alias k="kubectl"
 
 # Dotfiles management aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
