@@ -9,3 +9,6 @@ vim.g.maplocalleader = "//"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
+
+-- Share nvim clipboard with Windows, yanking also copies to windows clipboard
+vim.opt.clipboard = "unnamedplus"
