@@ -9,8 +9,8 @@ fi
 
 # Statusbar loop
 while true; do
-  xsetroot -name " $(date +"%F %R") "
-  sleep 1m
+    xsetroot -name " $(date +"%F %R") | $(cat /sys/class/power_supply/BAT0/capacity) % "
+    sleep 1m
 done &
 
 # Normal launch
