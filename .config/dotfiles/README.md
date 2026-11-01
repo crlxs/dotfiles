@@ -85,7 +85,8 @@ its data under `~/.local/share/ansible` and temporary files under `~/.cache/ansi
 
 The rice migration preserves displaced legacy files under
 `~/.local/state/rice/backups/<timestamp>/`. It moves the old bare `~/.dotfiles`
-repository and `~/rice` checkout without discarding uncommitted changes. If both
+repository without discarding uncommitted changes. Relocate a legacy `~/rice`
+checkout separately after Ansible exits, as described in the rice README. If both
 old and new repository destinations exist, migration stops for review. A clean,
 redundant `~/dotfiles` checkout is archived only when its current commit is
 already in the active dotfiles history.
