@@ -82,6 +82,8 @@ Configuration lives in `~/.config`, programs and repository data in `~/.local`,
 and disposable caches in `~/.cache`. Zsh, less and Vim history live under
 `~/.local/state`. Zsh completion dumps live under `~/.cache/zsh`. Ansible has
 its data under `~/.local/share/ansible` and temporary files under `~/.cache/ansible`.
+The small `~/.vimrc` loads Vim's fallback settings without setting `VIMINIT`,
+which would prevent Neovim from loading `~/.config/nvim/init.lua`.
 
 The rice migration preserves displaced legacy files under
 `~/.local/state/rice/backups/<timestamp>/`. It moves the old bare `~/.dotfiles`

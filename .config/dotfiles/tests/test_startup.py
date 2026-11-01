@@ -42,6 +42,10 @@ class StartupTests(unittest.TestCase):
         self.assertFalse((self.home / '.zcompdump').exists())
         self.assertFalse((self.home / '.config/zsh/.zcompdump').exists())
 
+    def test_neovim_config_is_not_overridden_by_viminit(self):
+        self.env['VIMINIT'] = 'source /old/vimrc'
+        self.assertEqual(self.shell('print -r -- "${VIMINIT-unset}"'), 'unset')
+
     def test_existing_x_authentication_is_preserved(self):
         self.env['XAUTHORITY'] = '/existing/session/auth'
         self.assertEqual(self.shell('print -r -- "$XAUTHORITY"'), '/existing/session/auth')
