@@ -1,0 +1,4 @@
+" Keep Vim fallback state outside the home directory.
+let s:state = expand('$XDG_STATE_HOME') . '/vim'
+call mkdir(s:state, 'p', 0700)
+let &viminfofile = s:state . '/viminfo'

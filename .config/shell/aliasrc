@@ -5,10 +5,11 @@ alias n="nvim"
 alias k="kubectl"
 
 # Dotfiles management aliases
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dotfiles() {
+    /usr/bin/git --git-dir="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles" --work-tree="$HOME" "$@"
+}
 
-# Use $XINITRC variable if file exists, so startx wont break.
-[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+# startx reads the exported XINITRC directly; no alias is needed.
 
 # wget alias to get rid of ~/.wget-hsts
 alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""

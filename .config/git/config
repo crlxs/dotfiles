@@ -1,3 +1,6 @@
 [user]
 	email = 140880473+crlxs@users.noreply.github.com
 	name = crlxs
+
+[core]
+	excludesFile = ~/.config/git/ignore

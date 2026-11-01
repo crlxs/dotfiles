@@ -3,3 +3,4 @@
 /.config/zsh/*.bak
 /.config/x11/*~
 /.local/share/wallpaper.*~
+/.config/dotfiles/tests/__pycache__/

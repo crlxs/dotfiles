@@ -28,21 +28,19 @@ zinit light-mode for \
 # Paths and Environment
 ###########################
 
-# Neovim
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
 # ASDF & kubelogin
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # NVM
-export NVM_DIR="$HOME/.config/nvm"
+export NVM_DIR="${NVM_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/nvm}"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
 # History configuration
 HISTSIZE=1000000
 SAVEHIST=1000000
-HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
+HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
+mkdir -p "${HISTFILE:h}" "${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 
 # Zsh options
 setopt histignorealldups sharehistory
@@ -65,7 +63,7 @@ zinit light joshskidmore/zsh-fzf-history-search
 ###########################
 
 autoload -Uz compinit
-compinit
+compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
