@@ -1,11 +1,6 @@
 #!/bin/sh
-
-# This file runs when a DM logs you into a graphical session.
-# startx/xinit also sources this file.
-
-# xrandr --dpi 96 	# Set DPI?
-# IMPLEMENT hostcheck + z10xrandr
-xset r rate 200 50 	# Set the keyboard repeat delay and rate
-xinput set-prop 12 'libinput Accel Profile Enabled' 0 1 #Disable mouse acceleration, device ID keeps changing, use 'xinput list' to find out
-#fehwallpaper &		# set background here aswell?
-xwallpaper --zoom ~/.local/share/wallpaper &
+xset r rate 200 50
+# Device IDs vary between machines; configure mouse acceleration per device locally.
+if [ -f "$HOME/.local/share/wallpaper" ]; then
+    xwallpaper --zoom "$HOME/.local/share/wallpaper"
+fi

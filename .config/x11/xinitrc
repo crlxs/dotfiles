@@ -1,23 +1,18 @@
 #!/bin/sh
-
-# Source xprofile
-if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile" ]; then
-	. "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
-else
-	. "$HOME/.xprofile"
+export PATH="$HOME/.local/bin:$PATH"
+if ! command -v dwm >/dev/null 2>&1; then
+    echo "rice: dwm is missing from PATH; rerun the suckless installation." >&2
+    exit 127
 fi
-
-# Statusbar loop
-while true; do
-  xsetroot -name " $(date +"%F %R") "
-  sleep 1m
+. "$HOME/.config/x11/xprofile"
+while :; do
+    xsetroot -name " $(date '+%F %R') "
+    sleep 60
 done &
-
-# Normal launch
-compton -b &
-exec dwm
-
-# With dbus
-#compton -b &
-#dbus-update-activation-environment --all
-#dbus-launch ssh-agent dwm
+status_pid=$!
+# XRender also works on guests without OpenGL/3D acceleration.
+mkdir -p "$HOME/.cache"
+picom --backend xrender >"$HOME/.cache/picom.log" 2>&1 &
+compositor_pid=$!
+trap 'kill "$status_pid" "$compositor_pid" 2>/dev/null || :' EXIT HUP INT TERM
+dbus-run-session -- dwm
